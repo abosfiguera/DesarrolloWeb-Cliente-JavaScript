@@ -11,13 +11,16 @@
 <body>
     <script> 
         let vector = new Array(true, 5, false, "hola", "adios", 2);
-        let primeraComprobacion = "vector(3):("+String(vector[3])+")>("+String(vector[2])+"):vector(2)";
-        
-        if (vector[3]>vector[2]) {
-            alert("El elemento de la posicion 4 es mayor que el de la posicion 3.");
-        } else {
-            alert("El elemento de la posicion 4 no es mayor que el de la posicion 3.");
-        }
+        document.write("Primera comprobación: "+(vector[3]>vector[2])+"<br><br>");
+        document.write("Segunda comprobación: "+(vector[0]||vector[2])+"<br><br>");
+        document.write("Tercera comprobación: "+(vector[0]&&vector[2])+"<br><br>");
+        document.write("Cuarta comprobación: <br>");
+        document.write("Sumar: "+(vector[1]+vector[5])+"<br>");
+        document.write("Restar: "+(vector[1]-vector[5])+"<br>");
+        document.write("Multiplicar: "+(vector[1]*vector[5])+"<br>");
+        document.write("Dividir: "+(vector[1]/vector[5])+"<br>");
+        document.write("Módulo: "+(vector[1]%vector[5])+"<br>");
+
     </script>
 </body>
 
