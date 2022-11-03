@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <button onclick="Ejercicio1()">Ej 1</button>
+
+    <script type="text/javascript">
+        const document = document.getElementById("documentId");
+        const breakElement = document.createElement("br");
+
+        //var theDiv = document.getElementById("<ID_OF_THE_DIV>");
+        //var content = document.createTextNode("<YOUR_CONTENT>");
+        //theDiv.appendChild(content);
+        //Ejercicio de prueba para calcular los lados de un cuadrilatero
+        /*
+         * 1. Guardar tus datos nombre, edad, altura y casado
+         *  (true o false) en variables. Muéstralas en la página
+         *  Web con saltos de línea.
+         */
+        function Ejercicio1() {
+            var nombre = Pablo;
+            var edad = 26;
+            var altura = 1.76;
+            var casado = false;
+            let content = document.createTextNode("Nombre: " + nombre);
+            document.appendChild(content);
+            document.appendChild(breakElement);
+            content = document.createTextNode("Edad: " + edad);
+            document.appendChild(content);
+            document.appendChild(breakElement);
+            content = document.createTextNode("Altura: " + altura);
+            document.appendChild(content);
+            document.appendChild(breakElement);
+            content = document.createTextNode("Casado: " + casado);
+            document.appendChild(content);
+            document.appendChild(breakElement);
+        }
+    </script>
+</body>
+
+</html>

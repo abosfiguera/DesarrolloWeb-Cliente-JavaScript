@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio 2</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//variables
+			//inicialización de la variable de tipo date con la que trabajar
+			let d1 = new Date();
+			let dia, mes, min;
+
+			//switch para sacar el día
+			switch (d1.getDay()) {
+				case 0:
+					dia = "domingo";
+					break;
+
+				case 1:
+					dia = "lunes";
+					break;
+
+				case 2:
+					dia = "martes";
+					break;
+
+				case 3:
+					dia = "miércoles";
+					break;
+
+				case 4:
+					dia = "jueves";
+					break;
+
+				case 5:
+					dia = "viernes";
+					break;
+
+				case 6:
+					dia = "sábado";
+					break;
+			}
+
+			//switch para los meses
+			switch (d1.getMonth()) {
+				case 0:
+					mes = "Enero";
+					break;
+
+				case 1:
+					mes = "Febrero";
+					break;
+
+				case 2:
+					mes = "Marzo";
+					break;
+
+				case 3:
+					mes = "Abril";
+					break;
+
+				case 4:
+					mes = "Mayo";
+					break;
+
+				case 5:
+					mes = "Junio";
+					break;
+
+				case 6:
+					mes = "Julio";
+					break;
+
+				case 7:
+					mes = "Agosto";
+					break;
+
+				case 8:
+					mes = "Septiembre";
+					break;
+
+				case 9:
+					mes = "Octubre";
+					break;
+
+				case 10:
+					mes = "Noviembre";
+					break;
+
+				case 11:
+					mes = "Diciembre";
+					break;
+			}
+
+            // construcción de la salida por pantalla
+			document.write(
+				"Hoy es " +
+					dia +
+					", " +
+					d1.getDate() +
+					" de " +
+					mes +
+					" de " +
+					d1.getFullYear() +
+					" y son las " +
+					d1.toLocaleTimeString().substr(0, 5) +
+					" horas."
+			);
+		</script>
+	</body>
+</html>

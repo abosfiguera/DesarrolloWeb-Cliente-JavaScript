@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <h1>Ejercicio 6</h1>
+    <h2>Introduce 3 números y muestra un texto por pantalla que diga cuál es el mayor.</h2>
+    <button onclick="Ejercicio6()">Ej 6</button>
+    <script type="text/javascript">
+        function Ejercicio6()
+            {
+                
+                var n1 = prompt("Num 1: ", "");
+                var n2 = prompt("Num 2: ", "");
+                var n3 = prompt("Num 3: ", "");
+
+                if (parseInt(n1)>parseInt(n2)) 
+                {
+                    if(parseInt(n1)>parseInt(n3)) 
+                    {
+                        document.write(n1+" es el mayor.");
+                    }
+                } else if (parseInt(n2)>parseInt(n3))
+                {
+                    document.write(n2+" es el mayor.");
+                } else if ((parseInt(n1)!=parseInt(n2)) && (parseInt(n1)!=parseInt(n3)) && (parseInt(n2)!=parseInt(n3))) 
+                {
+                    document.write(n3+" es el mayor.");
+                } else 
+                {
+                    document.write(n1+", "+n2+" y "+n3+" son iguales.");
+                }
+            }
+
+    </script>
+</body>
+</html>

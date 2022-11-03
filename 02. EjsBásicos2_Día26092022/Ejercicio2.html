@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <p>Haz una página que genere una pirámide de 1 a 50, formada de la siguiente forma:</p>
+    <p>1</p>
+    <p>22</p>
+    <p>333</p>
+    <p>4444</p>
+    <p>55555</p>
+    <p>666666</p>
+    <p>7777777</p>
+    <script type="text/javascript">
+        let psize = parseInt(prompt("Introduce el tamaño de la pirámide (num): "));
+        for (var i = 1; i < psize + 1; i++) {
+            for (var x = 0; x < i; x++) {
+                document.write(String(i));
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>

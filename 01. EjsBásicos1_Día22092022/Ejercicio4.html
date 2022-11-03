@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+    <h1>Ejercicio 4</h1>
+    <h2>Introduce un nombre y una nota mediante caja de texto. Si la nota es mayor que 4, se debe mostrar el texto
+        “nombre está aprobado con un xx”.</h2>
+    <button onclick="Ejercicio4()">Ejercicio 4</button>
+    <script type="text/javascript">
+        function Ejercicio4() {
+            let nombre = prompt("Nombre: ", "");
+            let nota = prompt("Nota: ", "");
+            if (parseFloat(nota) > 4) {
+                document.write(nombre + " está aprobado con un " + nota + ".");
+            } else {
+                document.write(nombre + " está suspendido con un " + nota + ".");
+            }
+        }
+    </script>
+</body>
+
+</html>

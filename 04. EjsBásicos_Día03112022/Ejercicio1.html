@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function comprobarMayMins() {
+            let mins = "abcdefghijklmnñopqrstuvwxyz";
+            let mays = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+            let nums = "0123456789";
+            let txt;
+            do {
+                txt = prompt("Introduce una cadena: ");
+            }
+            while ((txt === "" || txt === null));
+
+            let maynum = 0, minnum = 0, numnum = 0;
+            let min = false;
+            let may = false;
+            let num = false;
+            for (i = 0; i < txt.length; i++) {
+                if (mins.indexOf(txt.charAt(i), 0) != -1) {
+                    minnum++;
+                    min = true;
+                }
+                if (mays.indexOf(txt.charAt(i), 0) != -1) {
+                    maynum++;
+                    may = true;
+                }
+                if (nums.indexOf(txt.charAt(i), 0) != -1) {
+                    numnum++;
+                    num = true;
+                }
+            }
+            let res = "La cadena ("+txt+") tiene: <br>";
+            if (min == true) {
+                res += minnum+" minúsculas.<br>";
+            }
+            if (may == true) {
+                res += maynum+" mayúsculas.<br>";
+            }
+            if (num == true) {
+                res += numnum+" números.";
+            }
+            document.write(res);
+        }
+
+        window.onload = comprobarMayMins();
+    </script>
+</body>
+
+</html>
