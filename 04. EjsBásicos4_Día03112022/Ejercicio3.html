@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //3.Calcula el número factorial de un número introducido por pantalla mediante una función.
+        //Puedes ayudarte de funciones predefinidas de JavaScript.NOTA: 
+        //Solo se puede usar lo visto hasta ahora en el módulo. Debe haber un archivo “html” por cada  ejercicio.
+        //Todos  los  archivos  se  deben  subir  comprimidos  en  un  archivo  con  el  formato “DWEC_Apellido1_Nombre_Ejerc3.1.zip”.
+        function calcFactorial() {
+            let numIntroducido = prompt("Introduce un numero: ");
+            let res = numIntroducido;
+            document.write(numIntroducido + "! = ");
+            for (i = numIntroducido; i > 0; i--) {
+                if (i > 1) {
+                    res = res * (i - 1);
+                    document.write(i + " * ");
+                } else {
+                    document.write(i+"<br>");
+                }
+            }
+            document.write("Resultado: "+res);
+
+        }
+        window.onload = calcFactorial();
+    </script>
+</body>
+
+</html>
