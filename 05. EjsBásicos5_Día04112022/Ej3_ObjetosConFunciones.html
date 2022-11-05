@@ -8,11 +8,34 @@
 </head>
 <body>
     <script>
+
         //3.Crea un script que defina un objeto llamado “ProductosAlimenticios”.
-        //Este objeto debe presentar laspropiedades código, nombre y precio, además del método “imprimeDatos”,
-        //el cual escribe por pantalla losvalores de sus propiedades. Posteriormente, creatres instancias de
-        //este objeto y guárdalas en un array. Con laayuda del bucle for, utilizael método “imprimeDatos”
-        //para mostrar por pantalla los valores de los tres objetosinstanciados.
+        //Este objeto debe presentar las propiedades código, nombre y precio, además del método “imprimeDatos”,
+        //el cual escribe por pantalla los valores de sus propiedades.
+
+        function ProductosAlimenticios (cod_in, nom_in, pre_in){
+            this.cod = cod_in;
+            this.nom = nom_in;
+            this.pre = pre_in;
+            this.imprimeDatos = imprimeDatos();
+        }
+
+        function imprimeDatos(prod) {
+            document.write("Codigo: "+prod.cod+", Nombre: "+prod.nom+", Precio: "+prod.pre+".");
+        }
+
+        //Posteriormente, crea tres instancias de este objeto y guárdalas en un array.
+        let ListaProductos = new Array();
+        ListaProductos[0] = new ProductosAlimenticios(0, "Lata", 10);
+        ListaProductos[1] = new ProductosAlimenticios(1, "Patata", 20);
+        ListaProductos[2] = new ProductosAlimenticios(2, "Tomate", 30);
+
+
+        //Con la ayuda del bucle for, utilizael método “imprimeDatos”
+        //para mostrar por pantalla los valores de los tres objetos instanciados.
+        for(i = 0;i<ListaProductos.length; i++) {
+            ListaProductos[i].imprimeDatos(ListaProductos[i]);
+        }    
     </script>
 </body>
 </html>
