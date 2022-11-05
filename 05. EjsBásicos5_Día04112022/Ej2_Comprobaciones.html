@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        Num 1: <input type="number" name="a" id="a"><br>
+        Num 2: <input type="number" name="b" id="b"><br>
+        <button onclick="Comprobaciones()">Enviar</button>
+    </form>
+
+    <script>
+        function Comprobaciones() {
+            var n1 = document.getElementById('a').value;
+            var n2 = document.getElementById('b').value;
+
+            //Comprueba si el primero es mayor que el segundo.
+            if (n1 > n2) {
+                document.write(n1 + " es mayor que " + n2 + ".<br>");
+            } else if (n1 < n2) {
+                document.write(n2 + " es mayor que " + n1 + ".<br>");
+            } else {
+                document.write(n1 + " y " + n2 + " son iguales.<br>");
+            }
+
+            //Comprueba si el segundo es positivo.
+            if (n2 >= 0) {
+                document.write(n2 + " es positivo.");
+            } else {
+                document.write(n2 + " es negativo.");
+            }
+
+            //Comprueba si el primero es negativo o distinto de cero.
+            if (n1 < 0) {
+                document.write(n1 + " es negativo y distinto de cero.");
+            } else {
+                document.write(n1 + " no es negativo y distinto de cero.");
+            }
+
+            //Comprueba si al sumar 1 al primero lo convertimos en mayor o igual que el segundo.
+            if ((n1+1) >= n2) {
+                document.write("al sumar 1 al primero ("+n1+") se convierte en mayor o igual que el segundo ("+n2+")");
+            } else {
+                document.write("al sumar 1 al primero ("+n1+") no se convierte en mayor o igual que el segundo ("+n2+")");
+            }
+
+        }
+    </script>
+</body>
+
+</html>
