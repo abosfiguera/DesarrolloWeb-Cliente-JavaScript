@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Ejemplo 26573553C valido y 26573353C invalido
+        function calcDni () {
+            let dni, letra, numDni;
+            let letrasDni = new Array('T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E','T');
+            while(true) {
+                do {
+                    dni = prompt("Introduce un dni (ej: 26573553C valido y 26573353C invalido): ");
+                } while (dni.length != 9 || dni === '' || dni === null);
+                letra = dni.charAt(8);
+                numDni = dni.substring(0,8);
+                if (letra == letrasDni[parseInt(numDni)%23]){
+                    alert("El dni "+dni+" es correcto.")
+                } else {
+                    alert("El dni "+dni+" es incorrecto.")
+                }
+            }
+        }
+        
+        window.onload = calcDni();
+    </script>
+</body>
+</html>
