@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script type="text/javascript">
 
-        //3.Crea un script que defina un objeto llamado “ProductosAlimenticios”.
-        //Este objeto debe presentar las propiedades código, nombre y precio, además del método “imprimeDatos”,
-        //el cual escribe por pantalla los valores de sus propiedades.
+			//3.Crea un script que defina un objeto llamado “ProductosAlimenticios”.
+			//Este objeto debe presentar las propiedades código, nombre y precio, además del método “imprimeDatos”,
+			//el cual escribe por pantalla los valores de sus propiedades.
+			
+            function ProductosAlimenticios (cod_in, nom_in, pre_in){
+                this.cod = cod_in;
+                this.nom = nom_in;
+                this.pre = pre_in;
+                this.imprimeDatos = imprimeDatos;
+            }
 
-        function ProductosAlimenticios (cod_in, nom_in, pre_in){
-            this.cod = cod_in;
-            this.nom = nom_in;
-            this.pre = pre_in;
-            this.imprimeDatos = imprimeDatos();
-        }
+            function imprimeDatos() {
+                return ("Codigo: "+this.cod+", Nombre: "+this.nom+", Precio: "+this.pre+".");
+            }
 
-        function imprimeDatos(prod) {
-            document.write("Codigo: "+prod.cod+", Nombre: "+prod.nom+", Precio: "+prod.pre+".");
-        }
+			/* OPCION 2 */
 
-        //Posteriormente, crea tres instancias de este objeto y guárdalas en un array.
-        let ListaProductos = new Array();
-        ListaProductos[0] = new ProductosAlimenticios(0, "Lata", 10);
-        ListaProductos[1] = new ProductosAlimenticios(1, "Patata", 20);
-        ListaProductos[2] = new ProductosAlimenticios(2, "Tomate", 30);
+			//Posteriormente, crea tres instancias de este objeto y guárdalas en un array.
+            function lanzarProg () {
+                let ListaProductos = new Array();
+                ListaProductos[0] = new ProductosAlimenticios(0, "Lata", 10);
+                ListaProductos[1] = new ProductosAlimenticios(1, "Patata", 20);
+                ListaProductos[2] = new ProductosAlimenticios(2, "Tomate", 30);
 
 
-        //Con la ayuda del bucle for, utilizael método “imprimeDatos”
-        //para mostrar por pantalla los valores de los tres objetos instanciados.
-        for(i = 0;i<ListaProductos.length; i++) {
-            ListaProductos[i].imprimeDatos(ListaProductos[i]);
-        }    
-    </script>
-</body>
+			    //Con la ayuda del bucle for, utilizael método “imprimeDatos”
+			    //para mostrar por pantalla los valores de los tres objetos instanciados.
+                for(i = 0;i<ListaProductos.length; i++) {
+                    alert(ListaProductos[i].imprimeDatos(ListaProductos[i]));
+                }
+            }
+			window.onload = lanzarProg();
+		</script>
+	</body>
 </html>
