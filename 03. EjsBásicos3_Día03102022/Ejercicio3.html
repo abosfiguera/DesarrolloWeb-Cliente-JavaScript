@@ -30,9 +30,9 @@
 			//guardo la letra del dni
 			parteLetra = String(dni.substr(8, 9)).toUpperCase();
 
-            //si la última posicion del dni introducido existe en el array de posibles letras
+            //si la última posicion del dni introducido se corresponde con alguna de las posibles letras
 			//y la segunda parte del if es si el resto de la división de la parte numérica equivale
-			//a la posición de
+			//a la posición de dicha letra del dni
 			if (letra.indexOf(parteLetra) > 0 && (parteNum%23)==letra.indexOf(parteLetra)) {
 				document.write("El dni "+ dni +" es correcto");
 			} else {
