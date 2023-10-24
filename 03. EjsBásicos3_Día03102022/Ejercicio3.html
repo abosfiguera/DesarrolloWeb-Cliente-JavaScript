@@ -13,10 +13,11 @@
 			//TRWAG MYFPD XBNJZ SQVHL CKET
 			let letra = "TRWAGMYFPDXBNJZSQVHLCKET";
 			let parteNum, parteLetra;
-            let dni = "hola";
+            let dni = "";
 
             //console.log(typeof(dni)+ " "+ dni.length);
-            //Ejemplo 26573553C y no 26573353C
+            //Para pruebas: 26573553C válido y 26573353C inválido
+
 			//comprobación de dni bien introducido en longitud
 			while (dni.length < 8) {
 				dni = prompt("Introduce tu dni: ");
@@ -25,24 +26,17 @@
 
 			//guardo la parte numérica del dni
 			parteNum =  String(dni).substr(0, 8);
+
 			//guardo la letra del dni
 			parteLetra = String(dni.substr(8, 9)).toUpperCase();
-            console.log(parteNum);
-            console.log(parteLetra);
-
-            console.log(parteNum%23);
-
-            console.log(letra.indexOf(parteLetra));
-
-            console.log();
 
             //si la última posicion del dni introducido existe en el array de posibles letras
 			//y la segunda parte del if es si el resto de la división de la parte numérica equivale
 			//a la posición de
 			if (letra.indexOf(parteLetra) > 0 && (parteNum%23)==letra.indexOf(parteLetra)) {
-				document.write("dni correcto");
+				document.write("El dni "+ dni +" es correcto");
 			} else {
-				document.write("dni incorrecto");
+				document.write("El dni "+ dni +" es incorrecto");
 			}
 		</script>
 	</body>
