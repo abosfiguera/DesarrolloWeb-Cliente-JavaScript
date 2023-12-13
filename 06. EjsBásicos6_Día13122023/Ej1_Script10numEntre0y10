@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej1_Script10numEntre0y10</title>
+</head>
+<body>
+    <script>
+        // Generar 10 números aleatorios entre 0 y 10
+        let numeros = Array.from({ length: 10 }, () => Math.floor(Math.random() * 11));
+
+        // Filtrar números menores que 8
+        let menoresDe8 = numeros.filter(n => n < 8);
+
+        // Reemplazar números impares por la palabra "impar"
+        let imparesComoTexto = numeros.map(n => n % 2 !== 0 ? "impar" : n);
+
+        console.log("Números generados:", numeros);
+        console.log("Números menores de 8:", menoresDe8);
+        console.log("Números impares como 'impar':", imparesComoTexto);
+    </script>
+</body>
+</html>
